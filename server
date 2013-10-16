@@ -1,0 +1,18 @@
+#! /usr/local/bin/node
+
+var http = require('http');
+var send = require('send');
+
+var port = 3000;
+var num = 3000;
+
+if (process.argv.length > 2 && (num = parseInt(process.argv[2])))
+    port = num;
+
+var app = http.createServer(function(req, res){
+  send(req, req.url)
+    .from(process.cwd())
+    .pipe(res);
+}).listen(port);
+
+console.log('Listening on port ' + port + '...');

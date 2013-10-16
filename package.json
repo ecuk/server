@@ -1,0 +1,11 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Simple static web server",
+  "keywords": ["static", "file", "server"],
+  "author": "Eric Carlson",
+  "dependencies": {
+    "send": "*"
+  },
+  "main": "server"
+}
